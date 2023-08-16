@@ -9,7 +9,7 @@ import Nostr from "./assets/nostr.png";
 import ProtonMail from "./assets/protonmail.svg";
 import Session from "./assets/session.svg";
 import SimpleX from "./assets/simplex.svg";
-import VisitBtn from "./components/common/visit_btn";
+import VisitBtn from "./components/common/VisitBtn";
 import { Link } from "react-router-dom";
 import Navbar from "./components/common/Navbar";
 
