@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink, NavHashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   // Background opacity
@@ -36,14 +36,18 @@ const Navbar = () => {
     >
       <div className="flex justify-between w-[90%] mt-[15px] mb-[15px]">
         {/* Brand */}
-        <div className="text-center leading-[25px] group">
+        <HashLink
+          to="#home"
+          smooth
+          className="text-center leading-[25px] group"
+        >
           <p className="text-[20px] font-black text-[#4FACFE] group-hover:drop-shadow-[0_0px_15px_rgba(79,172,254,1)] transition-all ease-in-out duration-200">
             FREDERIK
           </p>
           <p className="text-[20px] font-black text-[#FE5196] group-hover:drop-shadow-[0_0px_15px_rgba(254,81,150,1)] transition-all ease-in-out duration-200">
             DIAMOND
           </p>
-        </div>
+        </HashLink>
         {/* Menu */}
         <div className="flex items-center">
           <NavHashLink

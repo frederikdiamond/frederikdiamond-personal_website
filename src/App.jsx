@@ -52,20 +52,22 @@ function App() {
               Without the freedom to use technology that empowers anonymity, we
               don’t have any privacy.
             </p>
-
             <p>
-              We see laws being proposed and passed that are in direct conflict
-              with the right to privacy.
-            </p>
-
-            <p>
-              I.e. the British government has proposed a bill that would make
-              end-to-end encrypted messaging illegal.
+              The essence of privacy hinges on our ability to harness technology
+              that empowers anonymity. Without this capability, the very concept
+              of privacy becomes fragile.
             </p>
             <p>
-              Governments all around the world are at war with our rights to
-              privacy. We must not let them win! Otherwise, we are on track to
-              be living in a tyrannical state, and going back won’t be easy.
+              We are witnessing the introduction and enactment of legislation
+              that directly challenges our right to privacy. For instance, the
+              British government has put forward a bill that seeks to outlaw
+              end-to-end encrypted messaging.
+            </p>
+            <p>
+              Governments worldwide seem to be in opposition to our fundamental
+              privacy rights. It is our duty to resist their encroachments.
+              Otherwise, we risk descending into a state of tyranny, and
+              reclaiming our freedoms may prove to be an arduous journey.
             </p>
           </div>
         </div>
@@ -83,15 +85,19 @@ function App() {
                 <h2 className="text-[25px] font-bold">BLOPstr!</h2>
                 <p className="text-[15px]">
                   BLOPstr is a beautiful and easy-to-use social media built on
-                  the open-protocol called Nostr. Nostr is a decentralized
-                  global communications protocol that truly enables freedom and
-                  anti-censorship. Nostr has many great use-cases, like building
-                  marketplaces, messaging apps, social medias, and much more!
+                  the open-protocol called Nostr.
+                  <br />
+                  Nostr is a decentralized global communications protocol that
+                  truly enables freedom and anti-censorship. Nostr has many
+                  great use-cases, like building marketplaces, messaging apps,
+                  social medias, and much more!
                 </p>
-                <VisitBtn to="blopstr.com" />
+                <VisitBtn to="https://www.blopstr.com/" />
               </div>
               {/* Image of project */}
-              <div className="md:col-span-[1/2] bg-white rounded-[15px]"></div>
+              <div className="md:col-span-[1/2] bg-white rounded-[15px] h-[250px] flex justify-center items-center text-[#707070] text-center">
+                <p>An image or video will be here showcasing the platform.</p>
+              </div>
             </div>
             <div className="grid md:grid-cols-2 grid-cols-1 gap-[30px] ">
               <div className="col-span-[1 / 2] md:order-2 flex flex-col items-start gap-[10px]">
@@ -102,10 +108,12 @@ function App() {
                   without any KYC-verification. The platform is running on the
                   Nostr protocol using NIP-15 (the Nostr marketplace).
                 </p>
-                <VisitBtn />
+                <VisitBtn to="#" />
               </div>
               {/* Image of project */}
-              <div className="md:col-span-[1/2] w-full md:h-full h-[150px] bg-white rounded-[15px]"></div>
+              <div className="md:col-span-[1/2] w-full md:h-full h-[250px] bg-white rounded-[15px] flex justify-center items-center text-[#707070] text-center">
+                <p>An image or video will be here showcasing the platform.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -117,7 +125,39 @@ function App() {
           <h1 className="font-bold text-[50px] text-center mt-[100px]">
             ABOUT ME
           </h1>
-          <p>Some random text here...</p>
+          <div className="text-[15px] flex flex-col gap-[15px]">
+            <p>
+              Hi, I’m Frederik! 20-years-old from Denmark 🇩🇰
+              <br />
+              Currently, I’m studying for a degree in Software Engineering.
+            </p>
+            <p>
+              As reiterated earlier, I firmly believe in privacy as a
+              fundamental human right.
+              <br />
+              It is imperative that we retain the liberty to utilize
+              technologies that bolster both privacy and anonymity. Depriving us
+              of the freedom to employ encrypted messaging apps,
+              cryptocurrencies, and similar tools ultimately erodes our capacity
+              for anonymity, consequently jeopardizing our right to privacy.
+            </p>
+            <p>
+              People often trade their privacy for the sake of convenience, and
+              I'm no exception. The reality is that it's quite challenging to
+              maintain a convenient lifestyle while prioritizing robust privacy
+              measures. Practically every app we use in our daily routines
+              encroaches upon our privacy. While there are apps and technologies
+              that respect privacy, they often suffer from clunkiness and a lack
+              of user-friendliness. It's important to note that just because an
+              application offers exceptional privacy and anonymity doesn't mean
+              it should compromise the user experience.
+            </p>
+            <p>
+              It is indeed possible to develop applications that provide
+              top-notch privacy and an outstanding user experience. This is
+              precisely the goal I aspire to pursue throughout my career.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -160,6 +200,7 @@ function App() {
                   <p className="text-[#707070]">SimpleX</p>
                   <Link
                     to="https://simplex.chat/contact#/?v=1-2&smp=smp%3A%2F%2F0YuTwO05YJWS8rkjn9eLJDjQhFKvIYd8d4xG8X1blIU%3D%40smp8.simplex.im%2FT8hXg42LKJ0NS6irlr2dAZrGmFdcEkx-%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAYbBGwUuV1VtUgRLXLrV0BZje8GW7zD8YK8Lm-XpNWwA%253D%26srv%3Dbeccx4yfxxbvyhqypaavemqurytl6hozr47wfc7uuecacjqdvwpw2xid.onion"
+                    target="_blank"
                     className="font-semibold text-white transition-all hover:text-blue-500 hover:underline"
                   >
                     Link to QR-code
