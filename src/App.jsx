@@ -12,6 +12,7 @@ import SimpleX from "./assets/simplex.svg";
 import VisitBtn from "./components/common/VisitBtn";
 import { Link } from "react-router-dom";
 import Navbar from "./components/common/Navbar";
+import CopyToClipboard from "./components/CopyToClipboard";
 
 function App() {
   return (
@@ -37,7 +38,7 @@ function App() {
         />
       </div>
       <div className="flex justify-center h-[100vh] z-10">
-        <div className="flex gap-[100px] w-[50%]">
+        <div className="md:flex md:gap-[100px] lg:w-[50%] md:w-[75%] w-[90%]">
           <h1 className="font-['Montserrat'] text-[50px] font-bold leading-[70px]">
             PRIVACY.
             <br />
@@ -45,7 +46,7 @@ function App() {
             <br />
             ANONYMITY.
           </h1>
-          <div className="flex flex-col gap-[15px] mt-[50px] text-[15px] opacity-90">
+          <div className="flex flex-col gap-[15px] mt-[50px] text-[16px] opacity-90">
             <p className="font-semibold">I believe privacy is a human right.</p>
             <p>
               Without the freedom to use technology that empowers anonymity, we
@@ -71,15 +72,30 @@ function App() {
       </div>
 
       {/* My projects */}
-      <div id="projects" className="w-full h-[100vh] flex justify-center">
-        <div className="w-[50%] flex flex-col">
+      <div id="projects" className="w-full flex justify-center">
+        <div className="lg:w-[50%] md:w-[75%] w-[90%] flex flex-col">
           <h1 className="font-bold text-[50px] leading-[40px] w-[370px] mt-[100px] text-stroke text-[#010101] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-blue-900 hover:to-blue-500">
             MY PROJECTS
           </h1>
           <div className="flex flex-col gap-[150px] mt-[100px]">
-            <div className="grid grid-cols-2 gap-[30px]">
+            <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-[30px]">
               <div className="col-span-[1 / 2] flex flex-col items-start gap-[10px]">
                 <h2 className="text-[25px] font-bold">BLOPstr!</h2>
+                <p className="text-[15px]">
+                  BLOPstr is a beautiful and easy-to-use social media built on
+                  the open-protocol called Nostr. Nostr is a decentralized
+                  global communications protocol that truly enables freedom and
+                  anti-censorship. Nostr has many great use-cases, like building
+                  marketplaces, messaging apps, social medias, and much more!
+                </p>
+                <VisitBtn to="blopstr.com" />
+              </div>
+              {/* Image of project */}
+              <div className="md:col-span-[1/2] bg-white rounded-[15px]"></div>
+            </div>
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-[30px] ">
+              <div className="col-span-[1 / 2] md:order-2 flex flex-col items-start gap-[10px]">
+                <h2 className="text-[25px] font-bold">CRYPTOWITHOUTKYC</h2>
                 <p className="text-[15px]">
                   An open-source, decentralized, and peer-to-peer crypto trading
                   platform where users can buy and sell bitcoin and monero
@@ -89,21 +105,7 @@ function App() {
                 <VisitBtn />
               </div>
               {/* Image of project */}
-              <div className="col-span-[1 / 2] bg-white"></div>
-            </div>
-            <div className="grid grid-cols-2 gap-[30px]">
-              <div className="col-span-[1 / 2] order-2 flex flex-col items-start gap-[10px]">
-                <h2 className="text-[25px] font-bold">CRYPTOWITHOUTKYC</h2>
-                <p>
-                  An open-source, decentralized, and peer-to-peer crypto trading
-                  platform where users can buy and sell bitcoin and monero
-                  without any KYC-verification. The platform is running on the
-                  Nostr protocol using NIP-15 (the Nostr marketplace).
-                </p>
-                <VisitBtn />
-              </div>
-              {/* Image of project */}
-              <div className="col-span-[1 / 2] bg-white"></div>
+              <div className="md:col-span-[1/2] w-full md:h-full h-[150px] bg-white rounded-[15px]"></div>
             </div>
           </div>
         </div>
@@ -126,7 +128,7 @@ function App() {
             <h1 className="text-[50px] font-bold">CONTACT</h1>
             {/* Contact Options */}
             <div className="flex gap-[20px] mt-[30px]">
-              <div className="flex items-center gap-[10px] px-[10px] py-[10px] rounded-[5px] hover:bg-white hover:bg-opacity-10">
+              <div className="w-[350px] h-[100px] truncate flex items-center gap-[10px] px-[10px] py-[10px] rounded-[5px] hover:bg-white hover:bg-opacity-10">
                 <div className="h-[40px] w-[40px] bg-white rounded-full flex items-center justify-center">
                   <img src={ProtonMail} alt="Email" className="h-[20px]" />
                 </div>
@@ -135,7 +137,7 @@ function App() {
                   <p className="font-semibold">contact@frederikdiamond.com</p>
                 </div>
               </div>
-              <div className="flex items-center gap-[10px] px-[10px] py-[10px] rounded-[5px] hover:bg-white hover:bg-opacity-10">
+              <div className="w-[350px] h-[100px] truncate flex items-center gap-[10px] px-[10px] py-[10px] rounded-[5px] hover:bg-white hover:bg-opacity-10">
                 <img
                   src={Session}
                   alt="Session Messenger"
@@ -143,16 +145,25 @@ function App() {
                 />
                 <div>
                   <p className="text-[#707070]">Session</p>
-                  <p className="font-semibold">1234567</p>
+                  <CopyToClipboard />
                 </div>
               </div>
-              <div className="flex items-center gap-[10px] px-[10px] py-[10px] rounded-[5px] hover:bg-white hover:bg-opacity-10">
+              <div className="w-[350px] h-[100px] text-ellipsis flex items-center gap-[10px] px-[10px] py-[10px] rounded-[5px] hover:bg-white hover:bg-opacity-10">
                 <div className="h-[40px] w-[40px] bg-white rounded-full flex items-center justify-center">
-                  <img src={SimpleX} alt="SimpleX Chat" className="h-[30px]" />
+                  <img
+                    src={SimpleX}
+                    alt="SimpleX Chat"
+                    className="h-[30px] w-[30px]"
+                  />
                 </div>
                 <div>
                   <p className="text-[#707070]">SimpleX</p>
-                  <p className="font-semibold">1234567</p>
+                  <Link
+                    to="https://simplex.chat/contact#/?v=1-2&smp=smp%3A%2F%2F0YuTwO05YJWS8rkjn9eLJDjQhFKvIYd8d4xG8X1blIU%3D%40smp8.simplex.im%2FT8hXg42LKJ0NS6irlr2dAZrGmFdcEkx-%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAYbBGwUuV1VtUgRLXLrV0BZje8GW7zD8YK8Lm-XpNWwA%253D%26srv%3Dbeccx4yfxxbvyhqypaavemqurytl6hozr47wfc7uuecacjqdvwpw2xid.onion"
+                    className="font-semibold text-white transition-all hover:text-blue-500 hover:underline"
+                  >
+                    Link to QR-code
+                  </Link>
                 </div>
               </div>
             </div>
@@ -195,7 +206,7 @@ function App() {
               Check the code here:
             </p>
             <Link
-              to="https://github.com/frederikdiamond"
+              to="https://github.com/frederikdiamond/frederikdiamond-personal_website"
               target="_blank"
               className="flex items-center gap-[5px] mt-[15px] px-[10px] py-[10px] border-solid border-white border-[3px] rounded-lg font-medium text-[17px] group hover:bg-white hover:drop-shadow-[0_5px_40px_rgba(255,255,255,0.35)] transition-all ease-in-out"
             >
@@ -221,12 +232,12 @@ function App() {
         <div>
           <img
             src={Noise}
-            className="absolute z-[0] bottom-0 w-full"
+            className="absolute z-[-1] bottom-0 w-full"
             alt="Decoration"
           />
           <img
             src={FooterGradient}
-            className="absolute z-[-1] bottom-0 w-full"
+            className="absolute z-[-2] bottom-0 w-full"
             alt="Decoration"
           />
         </div>
