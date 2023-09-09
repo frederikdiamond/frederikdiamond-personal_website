@@ -29,9 +29,11 @@ const Navbar = () => {
     backdropFilter: `blur(${blurValue}px)`,
   };
 
+  const [openMenu, setOpenMenu] = useState(false);
+
   return (
     <nav
-      className="navbar w-full flex justify-center fixed top-0 left-0 right-0 z-50 bg-[rgba(0,0,0,0)] backdrop-blur-0"
+      className="navbar w-full flex flex-col justify-center items-center fixed top-0 left-0 right-0 z-50 bg-[rgba(0,0,0,0)] backdrop-blur-0"
       style={navbarStyle}
     >
       <div className="flex justify-between w-[90%] mt-[15px] mb-[15px]">
@@ -48,8 +50,8 @@ const Navbar = () => {
             DIAMOND
           </p>
         </HashLink>
-        {/* Menu */}
-        <div className="flex items-center">
+        {/* Desktop Menu */}
+        <div className=" hidden sm:flex items-center">
           <NavHashLink
             to="#home"
             smooth
@@ -79,7 +81,61 @@ const Navbar = () => {
             CONTACT
           </NavHashLink>
         </div>
+        {/* Mobile Menu */}
+        <div
+          onClick={() => {
+            setOpenMenu(!openMenu);
+          }}
+          id="mobile-menu"
+          className="hidden h-full items-center justify-center cursor-pointer"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="#ffffff"
+              d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"
+            />
+          </svg>
+        </div>
       </div>
+      {openMenu ? (
+        <div className="h-full w-full flex items-center justify-center bg-black/95 backdrop-blur-[75%]">
+          <div className="flex flex-col w-full">
+            <NavHashLink
+              to="#home"
+              smooth
+              className="text-[25px] text-center font-bold w-full py-[20px] transition hover:bg-[#1a1a1a]/60"
+            >
+              HOME
+            </NavHashLink>
+            <NavHashLink
+              to="#projects"
+              smooth
+              className="text-[25px] text-center font-bold w-full py-[20px] transition hover:bg-[#1a1a1a]/60"
+            >
+              PROJECTS
+            </NavHashLink>
+            <NavHashLink
+              to="#about"
+              smooth
+              className="text-[25px] text-center font-bold w-full py-[20px] transition hover:bg-[#1a1a1a]/60"
+            >
+              ABOUT
+            </NavHashLink>
+            <NavHashLink
+              to="#contact"
+              smooth
+              className="text-[25px] text-center font-bold w-full py-[20px] transition hover:bg-[#1a1a1a]/60"
+            >
+              CONTACT
+            </NavHashLink>
+          </div>
+        </div>
+      ) : null}
     </nav>
   );
 };
