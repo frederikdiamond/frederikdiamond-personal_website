@@ -9,3 +9,4 @@ This is my personal website. I'm learning to code while building this website.
 - Change the hamburger-icon button to a close-icon when the mobile nav-menu is open 🚧
 - Make a cool animation for the mobile nav-menu when opening and closing it 🚧
 - Remove the navbar background color and blur effect when the mobile nav-menu is open 🚧
+- Disable scrolling when mobile nav-menu is open 🚧 
